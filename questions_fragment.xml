@@ -13,7 +13,6 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="32dp"
         android:paddingBottom="100dp"
-        android:text="Cat is sitting on a "
         android:textSize="16dp" />
 
     <CheckBox
@@ -49,5 +48,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Done" />
+
+    <TextView
+        android:id="@+id/text_view_quiz"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp" />
 
 </LinearLayout>

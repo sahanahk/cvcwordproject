@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/customborder"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFF00">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FF1493"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <TextView
+            android:id="@+id/quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/my_toolbar"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="32dp"
+            android:padding="32dp"
+            android:text="Let's play while we learn.... "
+            android:textSize="32sp" />
+
+        <ImageView
+            android:id="@+id/play_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quiz"
+            android:layout_marginLeft="16dp"
+            android:paddingBottom="8dp"
+            android:src="@drawable/ic_play_arrow_black_48dp" />
+
+        <TextView
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/play_image"
+            android:layout_marginLeft="32dp"
+            android:paddingLeft="8dp"
+            android:text="Play"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:id="@+id/exit_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/quiz"
+            android:layout_toRightOf="@id/play_image"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:src="@drawable/ic_close_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/exit_image"
+            android:layout_marginRight="64dp"
+            android:layout_toRightOf="@id/play"
+            android:gravity="right"
+            android:paddingRight="32dp"
+            android:text="Exit"
+            android:textAlignment="gravity"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+</RelativeLayout>
