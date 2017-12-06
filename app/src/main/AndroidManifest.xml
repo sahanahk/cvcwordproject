@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Quiz"
+            android:name=".Questions"
             android:label="Level 1"
             android:theme="@style/AppTheme.NoActionBar"
             android:parentActivityName="MainActivity">

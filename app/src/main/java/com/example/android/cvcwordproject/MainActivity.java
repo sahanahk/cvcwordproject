@@ -1,5 +1,6 @@
 package com.example.android.cvcwordproject;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -24,15 +25,24 @@ public class MainActivity extends AppCompatActivity {
         myToolbar.setTitleTextColor(Color.WHITE
         );
         setSupportActionBar(myToolbar);
-      //set up listner for play image,if clicked start the quiz
-        ImageView play_image=(ImageView) findViewById(R.id.play_image);
-        play_image.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view){
-               Intent intent=new Intent(MainActivity.this,Quiz.class);
+        //set up listner for play image,if clicked start the quiz
+        ImageView play_image = (ImageView) findViewById(R.id.play_image);
+        play_image.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Questions.class);
                 startActivity(intent);
             }
         });
+        ImageView exit_image = (ImageView) findViewById(R.id.exit_image);
+        exit_image.setOnClickListener(new View.OnClickListener() {
+                                          public void onClick(View view) {
+                                              finish();
+                                              System.exit(0);
+                                          }
+
+                                      }
+        );
+
 
     }
-
 }
