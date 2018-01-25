@@ -22,8 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         this.setTitle("Word Quiz");
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        myToolbar.setTitleTextColor(Color.WHITE
-        );
+        myToolbar.setTitleTextColor(Color.WHITE);
         setSupportActionBar(myToolbar);
         //set up listner for play image,if clicked start the quiz
         ImageView play_image = (ImageView) findViewById(R.id.play_image);
@@ -36,8 +35,10 @@ public class MainActivity extends AppCompatActivity {
         ImageView exit_image = (ImageView) findViewById(R.id.exit_image);
         exit_image.setOnClickListener(new View.OnClickListener() {
                                           public void onClick(View view) {
-                                              finish();
-                                              System.exit(0);
+                                              Intent intent = new Intent(Intent.ACTION_MAIN);
+                                              intent.addCategory(Intent.CATEGORY_HOME);
+                                              intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                              startActivity(intent);
                                           }
 
                                       }
